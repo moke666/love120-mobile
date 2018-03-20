@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+    {%block title%}
+    {%endblock%}
+    <meta name="description" content="6666">
+    <meta name="keywords" content="挽回爱情,修复婚姻,情感咨询,爱情青蛙">
+    <link href="/static/css/swiper-3.4.2.min.css" rel="stylesheet">
+    <link href="/static/css/reset.css" rel="stylesheet">
+    <link href="/static/css/skin.css?t=4" rel="stylesheet">
+    {%block css%}
+    {%endblock%}
+</head>
+
+<body>
+    <div class="wrap flex flex-v">
+        {% block body%}{% endblock %} 
+        {# 首页底部菜单 #}
+        <div class="qw-footer-menu">
+            <div class="qw-footer-menu-wrapper">
+                <div class="qw-footer-menu-listbox">
+                    <ul class="qw-footer-menu-list qw-clear">
+                        <li class="qw-footer-menu-item qw-left">
+                            <a class="qw-footer-menu-item-home" href="/">
+                                <span>首页</span>
+                            </a>
+                        </li>
+                        <li class="qw-footer-menu-item qw-left">
+                            <a class="qw-footer-menu-item-question" href="/qa/add">
+                                <span>在线提问</span>
+                            </a>
+                        </li>
+                        <li class="qw-footer-menu-item qw-left">
+                            <a class="qw-footer-menu-item-online" consult="kst">
+                                <span>在线咨询</span>
+                                <img src="/static/images/h_icon_one.png">
+                            </a>
+                        </li>
+                        <li class="qw-footer-menu-item qw-left">
+                            <a class="qw-footer-menu-item-reserve" href="/book">
+                                <span>预约咨询</span>
+                            </a>
+                        </li>
+                        <li class="qw-footer-menu-item qw-left">
+                            <a class="qw-footer-menu-item-my" href="/my">
+                                <span>我的</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    {# 脚本 #}
+    <script src="/static/js/lib/common.min.js"></script>
+    <script src="/static/js/global.min.js"></script>
+    <script src="/static/js/lib/swiper-3.4.2.jquery.min.js"></script>
+</body>
+
+</html>

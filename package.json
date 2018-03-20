@@ -1,0 +1,26 @@
+{
+  "name": "love120-mobile",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack-dev-server --open"
+  },
+  "author": "moke",
+  "license": "ISC",
+  "dependencies": {
+    "compile-nunjucks-loader": "^1.0.4",
+    "css-loader": "^0.28.11",
+    "html-webpack-plugin": "^3.0.6",
+    "nunjucks": "^3.1.2",
+    "nunjucks-loader": "^3.0.0",
+    "uglifyjs-webpack-plugin": "^1.2.4",
+    "webpack-dev-server": "^3.1.1"
+  },
+  "devDependencies": {
+    "webpack": "^4.1.1",
+    "webpack-cli": "^2.0.12"
+  }
+}
