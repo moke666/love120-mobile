@@ -18,7 +18,7 @@ body{
 	zoom:1;
 }
 
-.qw-clear:after{ ;
+.qw-clear:after{ 
 	content: '\20';
 	overflow: visible;
 	display: block;
@@ -4624,10 +4624,6 @@ color: #88b0fb;
 	font-size: 15px;
 	line-height: 40px;
 	color: #999999;
-}
-
-.qw-test-details .{
-	
 }
 
 /* 更多测试 */

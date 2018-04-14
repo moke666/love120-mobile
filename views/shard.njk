@@ -2,63 +2,206 @@
 <html lang="zh">
 
 <head>
-     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
-    {%block title%}
-    {%endblock%}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0"> {%block title%} {%endblock%}
     <meta name="description" content="6666">
     <meta name="keywords" content="挽回爱情,修复婚姻,情感咨询,爱情青蛙">
     <link href="/static/css/swiper-3.4.2.min.css" rel="stylesheet">
     <link href="/static/css/reset.css" rel="stylesheet">
     <link href="/static/css/skin.css?t=4" rel="stylesheet">
-    {%block css%}
-    {%endblock%}
+    <style>
+        .qw-home .qw-menu-item {
+            width: 33.33%;
+            height: 65px;
+            margin-top: 20px;
+        }
+    
+        .moke-flex {
+            width: 100%;
+            background: #fff
+        }
+    
+        .qw-home .moke-tutor-team-item {
+    
+            background: #fff;
+            border-radius: 3px;
+            box-shadow: 0 0 10px #ccc;
+            margin-right: 10px;
+        }
+    
+        .moke-tutor-team-list {
+            width: 400px
+        }
+    
+        .intro {
+            font-size: 13px;
+            line-height: 22px;
+            color: #666666;
+            text-align: justify;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 3;
+            overflow: hidden;
+        }
+    
+        .moke-footer-menu-item {
+            width: 33.33%;
+            height: 60px;
+        }
+    
+        .model-block {
+            width: 100%;
+        }
+    
+        .text {
+            padding: 15px;
+            font-size: 14px;
+            color: #666666;
+            letter-spacing: 3px;
+        }
+    
+        .moke-tutor-team-title {
+            position: relative;
+        }
+    
+        .qw-home .qw-tutor-team-title-line {
+            width: 4px;
+            height: 20px;
+            position: absolute;
+            right: 0px;
+            top: 16px;
+            background: #fd4a5e;
+        }
+    
+        .moke-home-head {
+            width: 100%;
+            /* height: 42px; */
+            background: #fff;
+            /* padding: 0 15px; */
+        }
+    
+        .qw-footer-menu-item {
+            width: 33.33%;
+            /*height: 50px;*/
+        }
+    
+        .qw-footer-menu-wrapper {
+            width: 100%;
+            height: 57.5px;
+            background: #fd4a5e;
+    
+            /*background-size: auto 100%;*/
+            position: absolute;
+            left: 0;
+            top: -7.5px;
+            padding-top: 7.5px;
+        }
+    
+        .qw-footer-menu-item span {
+            padding-top: 32px;
+            font-size: 12px;
+            line-height: 12px;
+            color: #ffffff;
+            display: block;
+            text-align: center;
+        }
+    
+        .qw-footer-menu-item-reservation {
+            background: url(/static/images/dock_btn_yy.png) no-repeat 15px 6px;
+            background-size: 30px 20px;
+            position: relative;
+        }
+    
+        .qw-footer-menu-item-call {
+            background: url(/static/images/dock_btn_call.png) no-repeat 15px 6px;
+            background-size: 20px 20px;
+        }
+    
+        .qw-footer-menu-item-about {
+            background: url(/static/images/dock_btn_about.png) no-repeat 15px 6px;
+            background-size: 20px 20px;
+        }
+    </style>
+    {%block css%} {%endblock%}
 </head>
 
 <body>
     <div class="wrap flex flex-v">
-        {% block body%}{% endblock %} 
+        <div class="moke-home-head qw-clear">
+            <img src="/static/images/title.png" alt="" style="width: 75%;">
+        </div>
+        <div class="qw-container flex-1">
+            <div class="qw-container-wrapper">
+                {% block body%} {% endblock %}
+                <!-- 底部信息栏 -->
+                <div class="qw-footer-nav">
+                    <div class="qw-footer-nav-listbox">
+                        <ul class="qw-footer-nav-list">
+                            <li class="qw-footer-nav-item">
+                                <a href="/team">专家团队</a>
+                            </li>
+                            <li class="qw-footer-nav-item">
+                                <a href="/about">关于我们</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="qw-footer-message">
+                        <p class="qw-footer-message-cut-line">情感救助热线：400-000-6486</p>
+                        <p class="qw-footer-message-copyright">COPYRIGHT ©2018 爱情120版权所有. 蜀ICP备18005921号</p>
+                    </div>
+                </div>
+                <!-- 二维码 -->
+                <div class="qw-qrcode-control funcQrcode">
+                    <a class="qw-qrcode-btn">
+                        <img class="qw-block" src="/static/images/H_menu_01.png">
+                    </a>
+                </div>
+            </div>
+        </div>
+
         {# 首页底部菜单 #}
         <div class="qw-footer-menu">
             <div class="qw-footer-menu-wrapper">
                 <div class="qw-footer-menu-listbox">
                     <ul class="qw-footer-menu-list qw-clear">
-                        <li class="qw-footer-menu-item qw-left">
+                        <!-- <li class="qw-footer-menu-item qw-left">
                             <a class="qw-footer-menu-item-home" href="/">
                                 <span>首页</span>
                             </a>
-                        </li>
+                        </li> 
                         <li class="qw-footer-menu-item qw-left">
                             <a class="qw-footer-menu-item-question" href="/qa/add">
                                 <span>在线提问</span>
                             </a>
-                        </li>
+                        </li> -->
                         <li class="qw-footer-menu-item qw-left">
-                            <a class="qw-footer-menu-item-online" consult="kst">
-                                <span>在线咨询</span>
-                                <img src="/static/images/h_icon_one.png">
+                            <a class="qw-footer-menu-item-reservation
+                            " consult="kst">
+                                <span>预约帮助</span>
                             </a>
                         </li>
                         <li class="qw-footer-menu-item qw-left">
-                            <a class="qw-footer-menu-item-reserve" href="/book">
-                                <span>预约咨询</span>
+                            <a class="qw-footer-menu-item-call">
+                                <span>免费热线</span>
                             </a>
                         </li>
                         <li class="qw-footer-menu-item qw-left">
-                            <a class="qw-footer-menu-item-my" href="/my">
-                                <span>我的</span>
+                            <a class="qw-footer-menu-item-about" href="/about.html">
+                                <span>关于我们</span>
                             </a>
                         </li>
                     </ul>
                 </div>
             </div>
         </div>
-        
+
     </div>
     {# 脚本 #}
     <script src="/static/js/lib/common.min.js"></script>
-    <script src="/static/js/global.min.js"></script>
-    <script src="/static/js/lib/swiper-3.4.2.jquery.min.js"></script>
+    <!-- <script src="/static/js/global.min.js"></script> -->
+    <script src="/static/js/lib/swiper-3.4.2.jquery.min.js"></script> 
+    {% block script %} {% endblock %}
 </body>
 
 </html>

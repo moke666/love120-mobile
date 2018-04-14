@@ -122,14 +122,14 @@ $(function () {
 		autoplayDisableOnInteraction: false,
 		pagination: '.swiper-pagination',
 		paginationClickable: true,
-	})
+	});
 
 	//导师团队
 	var TSwiper = $('.qw-tutor-team .swiper-container').swiper({
 		direction: 'horizontal',
 		speed: 1000,
+		width:400,
 		slidesPerView: 2,
-
-	})
+	});
 
 })

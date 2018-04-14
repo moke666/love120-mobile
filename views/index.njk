@@ -1,496 +1,124 @@
-{%extends "./views/shard.njk" %} 
-{%block title%}
+{%extends "./views/shard.njk" %} {%block title%}
 <title>首页</title>
-{%endblock%}
-{%block body %}
-{# 首页头部 #}
-<div class="qw-home-head qw-clear">
-    <div class="qw-logo qw-left">
-        <a></a>
-    </div>
-    <div class="qw-search-box qw-right">
-        <img src="../../../static/images/cm_icon_search.png">
-        <div class="input" id="searchBtn">搜索情感问答广场</div>
-    </div>
-</div>
-
-{# 搜索框弹出层 #}
-<div class="qw-search-popups">
-    <div class="qw-search-popups-head qw-clear">
-        <div class="qw-search-popups-head-box qw-left">
-            <input type="text" placeholder="搜索情感问答广场" id="searchInput">
-            <a class="qw-search-popups-seek-btn"></a>
-            <a class="qw-search-popups-anew-btn"></a>
-        </div>
-        <div class="qw-search-popups-cancel-control qw-right">
-            <a class="qw-search-popups-cancel-btn">取消</a>
-        </div>
-    </div>
-    <div class="qw-search-popups-listbox">
-        <div class="qw-search-none" style="display:none;">
-            <img src="/static/images/search_res.png">
-            <div>未搜索到相关结果</div>
-        </div>
-        <ul class="qw-search-popups-list">
-            <li class="qw-search-popups-item">
-                <a href="/question/268534/">
-                    <span class="qw-search-popups-item-details">我知道应该结束这段关系但是心理又有点舍不得......</span>
-                </a>
-            </li>
-            <li class="qw-search-popups-item">
-                <a href="/question/217996/">
-                    <span class="qw-search-popups-item-details">我怕男友是背着我和别人网恋，我该怎么办呢？</span>
-                </a>
-            </li>
-            <li class="qw-search-popups-item">
-                <a href="/question/167744/">
-                    <span class="qw-search-popups-item-details">和初恋分手后一直单着，爱情真的只有一次吗?</span>
-                </a>
-            </li>
-            <li class="qw-search-popups-item">
-                <a href="/question/363599/">
-                    <span class="qw-search-popups-item-details">送什么礼物才会让她开心呢?</span>
-                </a>
-            </li>
-            <li class="qw-search-popups-item">
-                <a href="/question/296874/">
-                    <span class="qw-search-popups-item-details">他是喜欢我还是只是在玩暧昧?</span>
-                </a>
-            </li>
-            <li class="qw-search-popups-item">
-                <a href="/question/289396/">
-                    <span class="qw-search-popups-item-details">有时候孩子真的会成为婚姻爱情中的羁绊吗?</span>
-                </a>
-            </li>
-            <li class="qw-search-popups-item">
-                <a href="/question/354692/">
-                    <span class="qw-search-popups-item-details">婚后女性如何继续保持魅力呢?</span>
-                </a>
-            </li>
-            <li class="qw-search-popups-item">
-                <a href="/question/243198/">
-                    <span class="qw-search-popups-item-details">和男友相恋两年有时候还会猜不透他的心，这是为什么呢？</span>
-                </a>
-            </li>
-            <li class="qw-search-popups-item">
-                <a href="/question/292344/">
-                    <span class="qw-search-popups-item-details">有一天老公突然就爆发了情绪说“我受够你了！”然后就开始冷战不理我......</span>
-                </a>
-            </li>
-            <li class="qw-search-popups-item">
-                <a href="/question/167098/">
-                    <span class="qw-search-popups-item-details">追求情感经历丰富的女孩好追吗？要怎么追呢?</span>
-                </a>
-            </li>
-        </ul>
-    </div>
-</div>
-
-{# 内容部分 #}
-<div class="qw-container flex-1">
-    <div class="qw-container-wrapper">
-
+{%endblock%} {%block body %} {# 内容部分 #}
         <!-- 移动端首页 -->
         <div class="qw-home">
-
             <!-- 首页轮播 -->
             <div class="qw-home-banner-view-wrapper">
                 <div class="qw-home-banner-view swiper-container qw-banner-overflow">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
-                            <a class="qw-home-banner-pic" style="background-image:url(/static/in/FrhkazkkBdKSOsi2TKVNU9bu_L6x)"></a>
+                            <a class="qw-home-banner-pic" style="background-image:url(/static/images/banner_1.gif)"></a>
                         </div>
                         <div class="swiper-slide">
-                            <a href="/team" class="qw-home-banner-pic" style="background-image:url(/static/images/H_banner.jpg)"></a>
+                            <a class="qw-home-banner-pic" style="background-image:url(/static/images/banner_2.jpg)"></a>
                         </div>
                     </div>
                     <div class="swiper-pagination"></div>
                 </div>
             </div>
+            <!-- 分割线 -->
+            <div class="qw-cut-line"></div>
 
-            <!-- 首页菜单 -->
+            <!-- 常见问题 -->
             <div class="qw-menu">
-                <div class="qw-menu-listbox">
-                    <ul class="qw-menu-list qw-clear">
-                        <li class="qw-menu-item qw-left">
-                            <a href="/zt/physical/">
-                                <img src="../../../static/images/H_menu_01.png">
-                                <h4>挽回男友</h4>
-                            </a>
-                        </li>
-                        <li class="qw-menu-item qw-left">
-                            <a href="/zt/love_qingwa/">
-                                <img src="../../../static/images/H_menu_02.png">
-                                <h4>挽回女友</h4>
-                            </a>
-                        </li>
-                        <li class="qw-menu-item qw-left">
-                            <a href="/zt/xxl2/">
-                                <img src="../../../static/images/H_menu_03.png">
-                                <h4>挽回老婆</h4>
-                            </a>
-                        </li>
-                        <li class="qw-menu-item qw-left">
-                            <a href="/zt/weixin/">
-                                <img src="../../../static/images/H_menu_04.png">
-                                <h4>挽回老公</h4>
-                            </a>
-                        </li>
-                        <li class="qw-menu-item qw-left">
-                            <a href="/zt/save_the_boyfriend/">
-                                <img src="../../../static/images/H_menu_05.png">
-                                <h4>女神计划</h4>
-                            </a>
-                        </li>
-                        <li class="qw-menu-item qw-left">
-                            <a href="/qa/explore">
-                                <img src="../../../static/images/H_menu_06.png">
-                                <h4>情感问答</h4>
-                            </a>
-                        </li>
-                        <li class="qw-menu-item qw-left">
-                            <a href="/cases">
-                                <img src="../../../static/images/H_menu_07.png">
-                                <h4>成功案例</h4>
-                            </a>
-                        </li>
-                        <li class="qw-menu-item qw-left">
-                            <a href="/team">
-                                <img src="../../../static/images/H_menu_08.png">
-                                <h4>专家团队</h4>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- 分割线 -->
-            <div class="qw-cut-line"></div>
-
-            <!-- 用户反馈 -->
-            <div class="qw-user-feedback">
-                <div class="qw-user-feedback-icon"></div>
-                <div class="swiper-container qw-banner-overflow">
-                    <div class="qw-user-feedback-passage swiper-wrapper">
-                        <div class="qw-user-feedback-passage-banner swiper-slide swiper-no-swiping">**：</div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- 首页信息栏 -->
-            <div class="qw-page-information qw-clear">
-                <div class="qw-page-information-test qw-left">
-                    <a href="/emotions">
-                        <div class="qw-page-information-test-title qw-clear">
-                            <h3 class="qw-left">青蛙情感测试</h3>
-                            <span class="qw-left">免费</span>
-                        </div>
-                        <p class="qw-page-information-test-passage">你足够了解自己吗</p>
-                        <div class="qw-page-information-test-into">
-                            <div class="qw-page-information-test-man">
-                                <img class="qw-block" src="../../../static/images/H_page_test_doc.png">
-                            </div>
-                            <div class="qw-page-information-test-control">
-                                <span class="qw-page-information-test-btn">开始测试></span>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="qw-page-information-right qw-left">
-                    <div class="qw-page-information-consult">
-                        <a consult="kst">
-                            <h3>免费在线咨询</h3>
-                            <p>服务时间：早8:00-凌晨00:00</p>
-                        </a>
-                    </div>
-                    <div class="qw-page-information-qa">
-                        <a href="/qa/explore">
-                            <h3>免费在线问答</h3>
-                            <p>资深情感导师 专业答疑解惑</p>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- 分割线 -->
-            <div class="qw-cut-line"></div>
-
-            <!-- 情感问答 -->
-            <div class="qw-emotion-qa">
-                <div class="qw-emotion-qa-head qw-clear">
-                    <div class="qw-emotion-qa-title qw-left">
-                        <div class="qw-emotion-qa-title-line"></div>
-                    </div>
-                    <div class="qw-emotion-qa-title-passage qw-left">
-                        <h2>帮您的困扰找到属于Ta的答案</h2>
-                    </div>
-                    <a class="qw-emotion-qa-more qw-right" href="/qa/explore">更多></a>
-                </div>
-                <div class="qw-emotion-qa-content-listbox swiper-container qw-banner-overflow">
-                    <ul class="qw-emotion-qa-content-list swiper-wrapper">
-                        <li class="qw-emotion-qa-content-item swiper-slide">
-                            <a href="/question/400809/"></a>
-                            <div class="qw-emotion-qa-content-item-wrapper">
-                                <a href="/question/400809/">
-                                    <div class="qw-emotion-qa-content-title">
-                                        <h4>我的婚姻生活如何避免平淡枯燥呢?</h4>
-                                    </div>
-                                    <div class="qw-emotion-qa-content-passage">
-                                        <p>想要找回爱情里的激情，最重要的是找回你们曾经只有两个人的那个世界。剔出掺和在你们二人之间的种种因素。你可以偶尔准备一顿烛光晚餐制造出一种浪漫...</p>
-                                    </div>
-                                </a>
-                                <div class="qw-emotion-qa-content-foot">
-                                    <a href="/question/400809/">
-                                        <div class="qw-emotion-qa-tutor qw-left">
-                                            <div class="qw-emotion-qa-tutor-portrait" style="background-image: url('http://image.aiqingqingwa.com/FopPvrimEpwMvnR9Z0iHH-u7mNLg?imageView2/1/w/50')"></div>
-                                            <span>导师曾子豪</span>
-                                        </div>
-                                    </a>
-                                    <div class="qw-emotion-qa-control qw-right">
-                                        <a href="/question/400809/"></a>
-                                        <a class="qw-emotion-qa-btn" href="/qa/add?invite=zeng-zi-hao">立即提问</a>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </li>
-                        <li class="qw-emotion-qa-content-item swiper-slide">
-                            <a href="/question/400428/"></a>
-                            <div class="qw-emotion-qa-content-item-wrapper">
-                                <a href="/question/400428/">
-                                    <div class="qw-emotion-qa-content-title">
-                                        <h4>老被父母催婚怎么办?</h4>
-                                    </div>
-                                    <div class="qw-emotion-qa-content-passage">
-                                        <p>首先你一定要对父母的态度非常好，牢记他们有可能会跟你生气、着急，甚至对你拍桌子、流眼泪，你需要做好充分地准备，保持良好的态度，多点耐心先听他...</p>
-                                    </div>
-                                </a>
-                                <div class="qw-emotion-qa-content-foot">
-                                    <a href="/question/400428/">
-                                        <div class="qw-emotion-qa-tutor qw-left">
-                                            <div class="qw-emotion-qa-tutor-portrait" style="background-image: url('http://image.aiqingqingwa.com/FuZUTDzJXNhSkLLJVFjFXwqXXOTy?imageView2/1/w/50')"></div>
-                                            <span>导师廖紫涵</span>
-                                        </div>
-                                    </a>
-                                    <div class="qw-emotion-qa-control qw-right">
-                                        <a href="/question/400428/"></a>
-                                        <a class="qw-emotion-qa-btn" href="/qa/add?invite=liao-zi-han">立即提问</a>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </li>
-                        <li class="qw-emotion-qa-content-item swiper-slide">
-                            <a href="/question/395872/"></a>
-                            <div class="qw-emotion-qa-content-item-wrapper">
-                                <a href="/question/395872/">
-                                    <div class="qw-emotion-qa-content-title">
-                                        <h4>他这是怎么了?是他开始厌烦我的使唤吗?</h4>
-                                    </div>
-                                    <div class="qw-emotion-qa-content-passage">
-                                        <p>为了长久幸福，你绝不能过分管制自己的丈夫，要给他们一定的自由。女人时刻在寻找着保护，男人也时刻在追求着自由。但是因为你的使唤或者唠叨，时时刻...</p>
-                                    </div>
-                                </a>
-                                <div class="qw-emotion-qa-content-foot">
-                                    <a href="/question/395872/">
-                                        <div class="qw-emotion-qa-tutor qw-left">
-                                            <div class="qw-emotion-qa-tutor-portrait" style="background-image: url('http://image.aiqingqingwa.com/FtPo_B0LVshllzfSbSMEO04HpMWK?imageView2/1/w/50')"></div>
-                                            <span>导师常敬</span>
-                                        </div>
-                                    </a>
-                                    <div class="qw-emotion-qa-control qw-right">
-                                        <a href="/question/395872/"></a>
-                                        <a class="qw-emotion-qa-btn" href="/qa/add?invite=chang-jing">立即提问</a>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </li>
-                        <li class="qw-emotion-qa-content-item swiper-slide">
-                            <a href="/question/391439/"></a>
-                            <div class="qw-emotion-qa-content-item-wrapper">
-                                <a href="/question/391439/">
-                                    <div class="qw-emotion-qa-content-title">
-                                        <h4>他说我支配欲太强，我不都是为了他好吗？</h4>
-                                    </div>
-                                    <div class="qw-emotion-qa-content-passage">
-                                        <p>对男友的交友关系也要指手画脚的言行，是极有可能被认为多管闲事的。即使你讨厌男友的某个朋友或者知道一些隐情，也请委婉表达。被他说了，你会觉得心...</p>
-                                    </div>
-                                </a>
-                                <div class="qw-emotion-qa-content-foot">
-                                    <a href="/question/391439/">
-                                        <div class="qw-emotion-qa-tutor qw-left">
-                                            <div class="qw-emotion-qa-tutor-portrait" style="background-image: url('http://image.aiqingqingwa.com/FqKhiQU7yv4JH7AkPRQljztkkXlW?imageView2/1/w/50')"></div>
-                                            <span>导师笑笑</span>
-                                        </div>
-                                    </a>
-                                    <div class="qw-emotion-qa-control qw-right">
-                                        <a href="/question/391439/"></a>
-                                        <a class="qw-emotion-qa-btn" href="/qa/add?invite=xiao-xiao">立即提问</a>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </li>
-                        <li class="qw-emotion-qa-content-item swiper-slide">
-                            <a href="/question/385119/"></a>
-                            <div class="qw-emotion-qa-content-item-wrapper">
-                                <a href="/question/385119/">
-                                    <div class="qw-emotion-qa-content-title">
-                                        <h4>有什么办法可以提升自己的魅力呢?</h4>
-                                    </div>
-                                    <div class="qw-emotion-qa-content-passage">
-                                        <p>男人喜欢的是女人的温柔和体贴，这种体贴并不单纯是生活上的体贴入微，更多的在于闺房中的体贴入微，知冷知热，知轻知重，更懂男人心。改善夫妻生活的...</p>
-                                    </div>
-                                </a>
-                                <div class="qw-emotion-qa-content-foot">
-                                    <a href="/question/385119/">
-                                        <div class="qw-emotion-qa-tutor qw-left">
-                                            <div class="qw-emotion-qa-tutor-portrait" style="background-image: url('http://image.aiqingqingwa.com/FqZi0yrZaGn9oiEgtxXkR_Vpz5vp?imageView2/1/w/50')"></div>
-                                            <span>导师齐楚嫣</span>
-                                        </div>
-                                    </a>
-                                    <div class="qw-emotion-qa-control qw-right">
-                                        <a href="/question/385119/"></a>
-                                        <a class="qw-emotion-qa-btn" href="/qa/add?invite=qi-chu-yan">立即提问</a>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </li>
-                    </ul>
-                    <div class="swiper-pagination"></div>
-                </div>
-            </div>
-
-            <!-- 分割线 -->
-            <div class="qw-cut-line"></div>
-
-            <!-- 导师团队 -->
-            <div class="qw-tutor-team">
+                <!-- titel -->
                 <div class="qw-tutor-team-head qw-clear">
-                    <div class="qw-tutor-team-title qw-left">
+                    <div class="moke-tutor-team-title qw-left">
                         <div class="qw-tutor-team-title-line"></div>
                     </div>
                     <div class="qw-tutor-team-title-passage qw-left">
-                        <h2>1V1在线答疑解惑</h2>
+                        <h2>常见问题</h2>
                     </div>
-                    <a class="qw-tutor-team-more qw-right" href="/team">更多></a>
                 </div>
-                <div class="qw-tutor-team-content">
-                    <div class="qw-tutor-team-listbox swiper-container">
-                        <ul class="qw-tutor-team-list qw-clear swiper-wrapper">
-                            <li class="qw-tutor-team-item qw-left swiper-slide">
-                                <a href="/tutor/chang-jing/">
-                                    <div class="qw-tutor-team-item-portrait" style="background-image: url('http://image.aiqingqingwa.com/FtPo_B0LVshllzfSbSMEO04HpMWK?imageView2/1/w/140')"></div>
+                <div class="qw-menu-listbox">
+                    <ul class="qw-menu-list qw-clear">
+                        <li class="qw-menu-item qw-left">
+                            <a href="#">
+                                <img src="/static/images/H_menu_01.png">
+                                <h4>伴侣出轨</h4>
+                            </a>
+                        </li>
+                        <li class="qw-menu-item qw-left">
+                            <a href="#">
+                                <img src="/static/images/H_menu_02.png">
+                                <h4>脱单困难</h4>
+                            </a>
+                        </li>
+                        <li class="qw-menu-item qw-left">
+                            <a href="#">
+                                <img src="/static/images/H_menu_03.png">
+                                <h4>离婚危机</h4>
+                            </a>
+                        </li>
+                        <li class="qw-menu-item qw-left">
+                            <a href="#">
+                                <img src="/static/images/H_menu_04.png">
+                                <h4>爱人分手</h4>
+                            </a>
+                        </li>
+                        <li class="qw-menu-item qw-left">
+                            <a href="#">
+                                <img src="/static/images/H_menu_05.png">
+                                <h4>婆媳关系</h4>
+                            </a>
+                        </li>
+                        <li class="qw-menu-item qw-left">
+                            <a href="#">
+                                <img src="/static/images/H_menu_06.png">
+                                <h4>财产纠纷</h4>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
 
-                                    <span class="qw-tutor-team-item-name">常敬</span>
-                                    <p>国家级婚姻家庭咨询师，高级情感导师，国家二级心理咨...</p>
-                                    <div consult="kst">
-                                        <span class="qw-tutor-team-item-btn">立即咨询</span>
-                                    </div>
-                                </a>
+            <!-- 分割线 -->
+            <div class="qw-cut-line"></div>
+
+            <!-- 不良影响 -->
+            <div class="moke-flex">
+                <!-- titel -->
+                <div class="qw-tutor-team-head qw-clear">
+                    <div class="moke-tutor-team-title qw-left">
+                        <div class="qw-tutor-team-title-line"></div>
+                    </div>
+                    <div class="qw-tutor-team-title-passage qw-left">
+                        <h2>不良影响</h2>
+                    </div>
+                </div>
+                <div>
+                    <img class="model-block" src="/static/images/buliangyingxiang.png" alt="不良影响">
+                </div>
+            </div>
+
+            <!-- 分割线 -->
+            <div class="qw-cut-line"></div>
+            <!-- 用户问题 -->
+            <div class="qw-tutor-team">
+                <div class="qw-tutor-team-head qw-clear">
+                    <div class="moke-tutor-team-title qw-left">
+                        <div class="qw-tutor-team-title-line"></div>
+                    </div>
+                    <div class="qw-tutor-team-title-passage qw-left">
+                        <h2>用户问题</h2>
+                    </div>
+                </div>
+                <div class="moke-tutor-team-content">
+                    <div style="margin: 0px 30px;" class="qw-tutor-team-listbox swiper-container">
+                        <ul class="moke-tutor-team-list qw-clear swiper-wrapper">
+                            <li class="moke-tutor-team-item qw-left swiper-slide">
+                                <img style="width:200px" src="/static/images/index/wxlt01.png" alt="">
                             </li>
-                            <li class="qw-tutor-team-item qw-left swiper-slide">
-                                <a href="/tutor/chen-fu-xian/">
-                                    <div class="qw-tutor-team-item-portrait" style="background-image: url('http://image.aiqingqingwa.com/Fjfahk3sDzYpiDPideKT-FD09nzH?imageView2/1/w/140')"></div>
-
-                                    <span class="qw-tutor-team-item-name">陈福仙</span>
-                                    <p>心理学科班出身，有着扎实的情感咨询理论基础，接受过...</p>
-                                    <div consult="kst">
-                                        <span class="qw-tutor-team-item-btn">立即咨询</span>
-                                    </div>
-                                </a>
+                            <li class="moke-tutor-team-item qw-left swiper-slide">
+                                <img style="width:200px" src="/static/images/index/wxlt02.png" alt="">
                             </li>
-                            <li class="qw-tutor-team-item qw-left swiper-slide">
-                                <a href="/tutor/guo-qi-qi/">
-                                    <div class="qw-tutor-team-item-portrait" style="background-image: url('http://image.aiqingqingwa.com/FobBSGm3xryn3Zbe2lLmp6E6uqUs?imageView2/1/w/140')"></div>
-
-                                    <span class="qw-tutor-team-item-name">郭柒柒</span>
-                                    <p>英国Sussex大学应用心理学学士，社会心理学硕士...</p>
-                                    <div consult="kst">
-                                        <span class="qw-tutor-team-item-btn">立即咨询</span>
-                                    </div>
-                                </a>
+                            <li class="moke-tutor-team-item qw-left swiper-slide">
+                                <img style="width:200px" src="/static/images/index/wxlt03.png" alt="">
                             </li>
-                            <li class="qw-tutor-team-item qw-left swiper-slide">
-                                <a href="/tutor/qi-chu-yan/">
-                                    <div class="qw-tutor-team-item-portrait" style="background-image: url('http://image.aiqingqingwa.com/FqZi0yrZaGn9oiEgtxXkR_Vpz5vp?imageView2/1/w/140')"></div>
-
-                                    <span class="qw-tutor-team-item-name">齐楚嫣</span>
-                                    <p>非诚勿扰人气最高女嘉宾之一，被孟非称其为大哥的女人...</p>
-                                    <div consult="kst">
-                                        <span class="qw-tutor-team-item-btn">立即咨询</span>
-                                    </div>
-                                </a>
+                            <li class="moke-tutor-team-item qw-left swiper-slide">
+                                <img style="width:200px" src="/static/images/index/wxlt04.png" alt="">
                             </li>
-                            <li class="qw-tutor-team-item qw-left swiper-slide">
-                                <a href="/tutor/wang-xiu-min/">
-                                    <div class="qw-tutor-team-item-portrait" style="background-image: url('http://image.aiqingqingwa.com/FjsVs5M7Y55WTxZQlBz4VWFAl3Tl?imageView2/1/w/140')"></div>
-
-                                    <span class="qw-tutor-team-item-name">王秀敏</span>
-                                    <p>从事中医工作二十多年，在认识中医情志调节对人健康之...</p>
-                                    <div consult="kst">
-                                        <span class="qw-tutor-team-item-btn">立即咨询</span>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="qw-tutor-team-item qw-left swiper-slide">
-                                <a href="/tutor/ma-li/">
-                                    <div class="qw-tutor-team-item-portrait" style="background-image: url('http://image.aiqingqingwa.com/FhrTdRNJOhvJRL26A0NfT8-d32qK?imageView2/1/w/140')"></div>
-
-                                    <span class="qw-tutor-team-item-name">马丽</span>
-                                    <p>从事婚恋情感工作五年多，接待情感个案上千例，从业期...</p>
-                                    <div consult="kst">
-                                        <span class="qw-tutor-team-item-btn">立即咨询</span>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="qw-tutor-team-item qw-left swiper-slide">
-                                <a href="/tutor/liao-zi-han/">
-                                    <div class="qw-tutor-team-item-portrait" style="background-image: url('http://image.aiqingqingwa.com/FuZUTDzJXNhSkLLJVFjFXwqXXOTy?imageView2/1/w/140')"></div>
-
-                                    <span class="qw-tutor-team-item-name">廖紫涵</span>
-                                    <p>曾任职于国内最高端钻石婚恋平台，资深服务顾问，服务...</p>
-                                    <div consult="kst">
-                                        <span class="qw-tutor-team-item-btn">立即咨询</span>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="qw-tutor-team-item qw-left swiper-slide">
-                                <a href="/tutor/xiao-xiao/">
-                                    <div class="qw-tutor-team-item-portrait" style="background-image: url('http://image.aiqingqingwa.com/FqKhiQU7yv4JH7AkPRQljztkkXlW?imageView2/1/w/140')"></div>
-
-                                    <span class="qw-tutor-team-item-name">笑笑</span>
-                                    <p>在心理健康中心和专科医院就职心理咨询和情感咨询工作...</p>
-                                    <div consult="kst">
-                                        <span class="qw-tutor-team-item-btn">立即咨询</span>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="qw-tutor-team-item qw-left swiper-slide">
-                                <a href="/tutor/zhang-xin/">
-                                    <div class="qw-tutor-team-item-portrait" style="background-image: url('http://image.aiqingqingwa.com/FhNicGukLgPAtmtYfM3gu506-4xk?imageView2/1/w/140')"></div>
-
-                                    <span class="qw-tutor-team-item-name">张新</span>
-                                    <p>从业四年半，为来访者深度分析男性心理，解读行为背后...</p>
-                                    <div consult="kst">
-                                        <span class="qw-tutor-team-item-btn">立即咨询</span>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="qw-tutor-team-item qw-left swiper-slide">
-                                <a href="/tutor/zhao-mei-yang/">
-                                    <div class="qw-tutor-team-item-portrait" style="background-image: url('http://image.aiqingqingwa.com/FotEu0X5bzrCVHYHRxFvPHbCJEZJ?imageView2/1/w/140')"></div>
-
-                                    <span class="qw-tutor-team-item-name">赵美阳</span>
-                                    <p>从事化妆造型工作近20年多部影视剧化妆师，拍过几十...</p>
-                                    <div consult="kst">
-                                        <span class="qw-tutor-team-item-btn">立即咨询</span>
-                                    </div>
-                                </a>
-                            </li>
-
                         </ul>
                     </div>
                 </div>
@@ -498,181 +126,85 @@
 
             <!-- 分割线 -->
             <div class="qw-cut-line"></div>
-
-            <!-- 成功案例 -->
-            <div class="qw-succeed-case">
-                <div class="qw-succeed-case-head qw-clear">
-                    <div class="qw-succeed-case-title qw-left">
-                        <div class="qw-succeed-case-title-line"></div>
+            <!-- 爱情120,专注守护爱情  -->
+            <div class="moke-flex">
+                <!-- titel -->
+                <div class="qw-tutor-team-head qw-clear">
+                    <div class="moke-tutor-team-title qw-left">
+                        <div class="qw-tutor-team-title-line"></div>
                     </div>
-                    <div class="qw-succeed-case-title-passage qw-left">
-                        <h2>成就更多人的幸福，我们在路上</h2>
+                    <div class="qw-tutor-team-title-passage qw-left">
+                        <h2>爱情120,专注守护爱情</h2>
                     </div>
-                    <a class="qw-succeed-case-more qw-right" href="/cases">更多></a>
                 </div>
-                <div class="qw-succeed-case-listbox">
-                    <ul class="qw-succeed-case-list">
-                        <li class="qw-succeed-case-item">
-                            <a href="/case/208236/">
-                                <div class="qw-succeed-case-user qw-clear">
-                                    <div class="qw-succeed-case-user-portrait qw-left">
-                                        <div class="qw-succeed-case-user-portrait-box" style="background-image: url('/static/images/user_default_icon.png')"></div>
-                                    </div>
-                                    <div class="qw-succeed-case-user-right qw-left">
-                                        <div class="qw-succeed-case-user-name">
-                                            <span>田*君</span>
-                                        </div>
-                                        <div class="qw-succeed-case-user-label qw-clear">
-                                            <span class="qw-succeed-case-user-age">23岁</span>
-                                            <span class="qw-succeed-case-user-profession">学生</span>
-                                            <span class="qw-succeed-case-user-theme">化解矛盾</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="qw-succeed-case-subtitle">
-                                    <h4>男友沉迷游戏时常忽略我 爱情青蛙教我夺回男友...</h4>
-                                </div>
-                                <div class="qw-succeed-case-content">
-                                    我觉得男友什么都挺好的，就是有一点让我非常受不了，那就是打游戏。他是那种一开始打游戏，啥都不会干的那种。他经常打游戏忘记吃饭、或者熬通...
-                                </div>
-                            </a>
-                        </li>
-                        <li class="qw-succeed-case-item">
-                            <a href="/case/207334/">
-                                <div class="qw-succeed-case-user qw-clear">
-                                    <div class="qw-succeed-case-user-portrait qw-left">
-                                        <div class="qw-succeed-case-user-portrait-box" style="background-image: url('/static/images/user_default_icon.png')"></div>
-                                    </div>
-                                    <div class="qw-succeed-case-user-right qw-left">
-                                        <div class="qw-succeed-case-user-name">
-                                            <span>梁*琪</span>
-                                        </div>
-                                        <div class="qw-succeed-case-user-label qw-clear">
-                                            <span class="qw-succeed-case-user-age">31岁</span>
-                                            <span class="qw-succeed-case-user-profession">家庭主妇</span>
-                                            <span class="qw-succeed-case-user-theme">修复婚姻</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="qw-succeed-case-subtitle">
-                                    <h4>相处多年关系逐渐平淡疏离 夫妻如何增加亲密重...</h4>
-                                </div>
-                                <div class="qw-succeed-case-content">
-                                    我们刚结婚那会，很多人都会跟我们说一句，百年好合，永结同心，但是人生几十年，说多不多说少不少，还真难保证会相伴到老。就像现在的我和老公...
-                                </div>
-                            </a>
-                        </li>
-                    </ul>
+                <div>
+                    <img src="/static/images/zhuanzu.png" class="model-block" alt="">
                 </div>
             </div>
 
             <!-- 分割线 -->
             <div class="qw-cut-line"></div>
-
-            <!-- 青蛙资讯 -->
-            <div class="qw-frog-information">
-                <div class="qw-frog-information-head qw-clear">
-                    <div class="qw-frog-information-title qw-left">
-                        <div class="qw-frog-information-title-line"></div>
+            <!--我们专业解决两性情感问题  -->
+            <div class="moke-flex">
+                <!-- titel -->
+                <div class="qw-tutor-team-head qw-clear">
+                    <div class="moke-tutor-team-title qw-left">
+                        <div class="qw-tutor-team-title-line"></div>
                     </div>
-                    <div class="qw-frog-information-title-passage qw-left">
-                        <h2>属于您的情感头条</h2>
+                    <div class="qw-tutor-team-title-passage qw-left">
+                        <h2>我们专业解决两性情感问题</h2>
                     </div>
-                    <a class="qw-frog-information-more qw-right" href="/news">更多></a>
                 </div>
-                <div class="qw-frog-information-listbox">
-                    <ul class="qw-frog-information-list">
-                        <li class="qw-frog-information-item">
-                            <a href="/news/27800/">
-                                <div class="qw-frog-information-user qw-clear">
-                                    <div class="qw-frog-information-user-portrait qw-left">
-                                        <div class="qw-frog-information-user-portrait-box" style="background-image: url('http://img.7799520.com/2017-11-17-1510912895-86lsjrfO.png?imageView2/1/w/80')"></div>
-                                    </div>
-                                    <div class="qw-frog-information-user-right qw-left">
-                                        <div class="qw-frog-information-user-name">
-                                            <span>幸福进行时</span>
-                                        </div>
-                                        <div class="qw-frog-information-user-label qw-clear">
-                                            <span class="qw-frog-information-user-date">发布于 2018-03-19</span>
-                                            <span class="qw-frog-information-user-theme">挽回爱情</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="qw-frog-information-subtitle">
-                                    <h4>如何让另一半越来越爱你？</h4>
-                                </div>
-                                <div class="qw-frog-information-content">
-                                    <p>爱情会不会过期，在于怎么保存。</p>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="qw-frog-information-item">
-                            <a href="/news/27799/">
-                                <div class="qw-frog-information-user qw-clear">
-                                    <div class="qw-frog-information-user-portrait qw-left">
-                                        <div class="qw-frog-information-user-portrait-box" style="background-image: url('http://img.7799520.com/Fhg-Mu9WriwEg6INGFIRrjXvNqc8?imageView2/1/w/80')"></div>
-                                    </div>
-                                    <div class="qw-frog-information-user-right qw-left">
-                                        <div class="qw-frog-information-user-name">
-                                            <span>楼上小花</span>
-                                        </div>
-                                        <div class="qw-frog-information-user-label qw-clear">
-                                            <span class="qw-frog-information-user-date">发布于 2018-03-19</span>
-                                            <span class="qw-frog-information-user-theme">挽回爱情</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="qw-frog-information-subtitle">
-                                    <h4>他爱不爱你，看睡觉姿势就知道</h4>
-                                </div>
-                                <div class="qw-frog-information-content">
-                                    <p>爱你的人，一定想好好睡你。</p>
-                                </div>
-                            </a>
-                        </li>
-                    </ul>
+                <div>
+                    <img class="model-block" src="/static/images/jiejue.png" alt="">
                 </div>
             </div>
+
             <!-- 分割线 -->
             <div class="qw-cut-line"></div>
-        </div>
-        <!-- 底部信息栏 -->
-        <div class="qw-footer-nav">
-            <div class="qw-footer-nav-listbox">
-                <ul class="qw-footer-nav-list">
-                    <li class="qw-footer-nav-item">
-                        <a href="/team">专家团队</a>
-                    </li>
-                    <li class="qw-footer-nav-item">
-                        <a href="/about">关于我们</a>
-                    </li>
-                    <!-- <li class="qw-footer-nav-item">
-			                <a>一键反馈</a>
-			            </li> -->
-                    <!--<li class="qw-footer-nav-item">
-			                <a href="http://www.aiqingqingwa.com/">电脑版</a>
-			            </li>-->
-                </ul>
+            <!--我们的服务流程  -->
+            <div class="moke-flex">
+                <!-- titel -->
+                <div class="qw-tutor-team-head qw-clear">
+                    <div class="moke-tutor-team-title qw-left">
+                        <div class="qw-tutor-team-title-line"></div>
+                    </div>
+                    <div class="qw-tutor-team-title-passage qw-left">
+                        <h2>我们的服务流程</h2>
+                    </div>
+                </div>
+                <div>
+                    <img class="model-block" src="/static/images/liucheng.png" alt="">
+                </div>
             </div>
-            <div class="qw-footer-message">
-                <p class="qw-footer-message-cut-line">情感救助热线：4000909520</p>
-                <p class="qw-footer-message-copyright">@2017爱情青蛙 粤ICP备17039291号-1</p>
+
+            <!-- 分割线 -->
+            <div class="qw-cut-line"></div>
+            <!--为什么选择爱情120  -->
+            <div class="moke-flex">
+                <!-- titel -->
+                <div class="qw-tutor-team-head qw-clear">
+                    <div class="moke-tutor-team-title qw-left">
+                        <div class="qw-tutor-team-title-line"></div>
+                    </div>
+                    <div class="qw-tutor-team-title-passage qw-left">
+                        <h2>为什么选择爱情120</h2>
+                    </div>
+                </div>
+                <div>
+                    <div class="text">
+                        <span>
+                            &nbsp;&nbsp;爱情120成立于2010年，前身是爱情120情感工作室。多年来，我们致力于两性情感解决方案， 用心研究，全心付出。用最专业的技能和最温暖的关怀成功帮助上万人。 团队汇集大批心理学、情感学方面专家学者，以结果为导向，收获无数学员好评。
+                        </span>
+                    </div>
+                    <div>
+                        <img class="model-block" src="/static/images/qinqi.png" alt="">
+                    </div>
+                    <div>
+                        <img class="model-block" src="/static/images/tuiguang_03.png" alt="">
+                    </div>
+                </div>
             </div>
-        </div>
-        <!-- 二维码 -->
-        <div class="qw-qrcode-control funcQrcode">
-            <a class="qw-qrcode-btn">
-                <img class="qw-block" src="../../../static/images/H_icon_qrcode.png">
-            </a>
-        </div>
 
-        <!-- 返回顶部 -->
-        <div class="qw-top-control funcGoTop">
-            <a class="qw-top-btn">
-                <img class="qw-block" src="../../../static/images/H_icon_top.png">
-            </a>
         </div>
-
-    </div>
-</div>
 {%endblock %}
