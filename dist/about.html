@@ -140,7 +140,20 @@
 
 <!-- 移动端关于我们 -->
 <div class="qw-home">
+    <!-- 分割线 -->
+    <div class="qw-cut-line"></div>
     <!-- 导师团队 -->
+    <div class="moke-flex">
+        <!-- titel -->
+        <div class="qw-tutor-team-head qw-clear">
+            <div class="moke-tutor-team-title qw-left">
+                <div class="qw-tutor-team-title-line"></div>
+            </div>
+            <div class="qw-tutor-team-title-passage qw-left">
+                <h2>导师团队</h2>
+            </div>
+        </div>
+    </div>
     <div class="qw-emotion-qa">
         <div class="qw-emotion-qa-content-listbox swiper-container qw-banner-overflow">
             <ul class="qw-emotion-qa-content-list swiper-wrapper">
@@ -217,6 +230,45 @@
 
                 </li>
 
+                <li class="qw-emotion-qa-content-item swiper-slide">
+
+                    <div class="qw-emotion-qa-content-item-wrapper">
+
+                        <div style="margin: 20px 10px" class="qw-left">
+                            <div class="qw-tutor-team-item-portrait" style="background-image: url( '/static/images/daoshi_5.png')"></div>
+                            <span class="qw-tutor-team-item-btn">美籽老师</span>
+                        </div>
+
+                        <div style="padding-top: 30px;display: flex" class="qw-emotion-qa-content-passage">
+                            <span class="intro">资质背景：
+                                    IAC国际个人形象管理师，
+                                    国家注册高级服装搭配师，
+                                    中国流行色协会色彩搭配师，
+                                    中国色彩协会会员。 
+                                <!-- 导师寄语:情感咨询是针对亲密关系和自我成长的提升改善，突破舒适区的过程必然伴随着不适和痛苦，
+                                但老师希望陪着你最终走上幸福的道路，一起走下每一步。 -->
+                            </span>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="qw-emotion-qa-content-item swiper-slide">
+                    <div class="qw-emotion-qa-content-item-wrapper">
+                        <div style="margin: 20px 10px" class="qw-left">
+                            <div class="qw-tutor-team-item-portrait" style="background-image: url('/static/images/daoshi_6.png')"></div>
+                            <span class="qw-tutor-team-item-btn">李浩老师</span>
+                        </div>
+
+                        <div style="padding-top: 30px;display: flex" class="qw-emotion-qa-content-passage">
+                            <span class="intro">
+                            资质背景：四川大学应用心理学高级研修班 国家三级心理咨询师。
+                            
+                            导师寄语：“你若盛开，清风自来”，当你变得灿烂多姿的时候，幸福便随之而来。
+                            </span>
+                        </div>
+                    </div>
+                </li>
+
             </ul>
             <div class="swiper-pagination"></div>
         </div>
@@ -225,19 +277,19 @@
     <!-- 分割线 -->
     <div class="qw-cut-line"></div>
 
-    <!--公司介绍  -->
+    <!--关于我们  -->
     <div class="moke-flex">
         <!-- titel -->
         <div class="qw-tutor-team-head qw-clear">
-            <div class="qw-tutor-team-title qw-left">
+            <div class="moke-tutor-team-title qw-left">
                 <div class="qw-tutor-team-title-line"></div>
             </div>
             <div class="qw-tutor-team-title-passage qw-left">
-                <h2>公司介绍</h2>
+                <h2>关于我们</h2>
             </div>
         </div>
         <div>
-            <img class="model-block" src="/static/images/about.png" alt="公司介绍">
+            <img class="model-block" src="/static/images/about.png" alt="关于我们">
         </div>
         
     </div>
@@ -300,12 +352,18 @@
     <script src="/static/js/lib/swiper-3.4.2.jquery.min.js"></script>
     <script>
         $(function(){
-            debugger
             if(location.pathname==='/about.html'){
                 $('.qw-footer-menu-item-link').attr('href','/');
                 $('.qw-footer-menu-item-link span').text('首页');
             } 
         });
+        var _hmt = _hmt || [];
+		(function() {
+  			var hm = document.createElement("script");
+  			hm.src = "https://hm.baidu.com/hm.js?196d1796309de16fb3f2664842537099";
+  			var s = document.getElementsByTagName("script")[0]; 
+  			s.parentNode.insertBefore(hm, s);
+		})();
     </script>
     
 <script>
